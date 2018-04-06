@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="net040.jeroenjonkman.net" name="End_assignment.DoublyLinkedListTest" skipped="0" tests="15" time="0.213" timestamp="2018-04-06T21:15:03">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/templates//" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="maven.build.srcDir.0" value="src/main/java" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/classes" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327" />
+    <property name="java.runtime.version" value="1.8.0_65-b17" />
+    <property name="maven.build.resourceDir.0" value="src/main/resources" />
+    <property name="project.build.sourceEncoding" value="UTF-8" />
+    <property name="user.name" value="jeroenjonkman" />
+    <property name="maven.build.outputDir" value="target/classes" />
+    <property name="maven.repo.local" value="/Users/jeroenjonkman/.m2/repository" />
+    <property name="maven.build.finalName" value="End_assigment-1.0.0" />
+    <property name="maven.build.testDir.0" value="src/test/java" />
+    <property name="user.language" value="nl" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="package" />
+    <property name="maven.reporting.outputDirectory" value="target/site" />
+    <property name="ant.project.name" value="End_assigment" />
+    <property name="java.version" value="1.8.0_65" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="NL" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="/Users/jeroenjonkman/workspace_Prive/End_assignment/build.xml" />
+    <property name="os.version" value="10.13.4" />
+    <property name="maven.build.testOutputDir" value="target/test-classes" />
+    <property name="ant.file.End_assigment" value="/Users/jeroenjonkman/workspace_Prive/End_assignment/build.xml" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="25.65-b01" />
+    <property name="maven.build.dir" value="target" />
+    <property name="maven.test.reports" value="target/test-reports" />
+    <property name="ant.library.dir" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="project.build.outputDirectory" value="target/classes" />
+    <property name="eclipse.pdebuild.scripts" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/scripts//" />
+    <property name="user.home" value="/Users/jeroenjonkman" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.library.path" value="/Users/jeroenjonkman/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="maven.settings.offline" value="false" />
+    <property name="ant.file.type.End_assigment" value="file" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="maven.settings.interactiveMode" value="true" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner End_assignment.DoublyLinkedListTest skipNonTests=false filtertrace=true haltOnError=true haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/jeroenjonkman/workspace_Prive/End_assignment/target/test-reports/TEST-End_assignment.DoublyLinkedListTest.xml formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter crashfile=/Users/jeroenjonkman/workspace_Prive/End_assignment/junitvmwatcher3816887064226544833.properties propsfile=/Users/jeroenjonkman/workspace_Prive/End_assignment/junit918435011808311015.properties" />
+    <property name="java.class.path" value="/Users/jeroenjonkman/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/jeroenjonkman/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/jeroenjonkman/workspace_Prive/End_assignment/target/classes:/Users/jeroenjonkman/workspace_Prive/End_assignment/target/test-classes:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-launcher.jar:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant.jar:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-junit.jar:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
+    <property name="project.build.directory" value="target" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/var/folders/mz/knnv9_gn1qb_pm6_71gg8wd80000gn/T/" />
+    <property name="eclipse.pdebuild.home" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.pde.build_3.9.100.v20150521-1524/.//" />
+    <property name="junit.present" value="true" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="ant.file.End_assigment-from-maven" value="/Users/jeroenjonkman/workspace_Prive/End_assignment/maven-build.xml" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="os.arch" value="x86_64" />
+    <property name="maven.build.testResourceDir.0" value="src/test/resources" />
+    <property name="java.ext.dirs" value="/Users/jeroenjonkman/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/jeroenjonkman/workspace_Prive/End_assignment" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="." />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.apache.ant_1.9.6.v201510161327/lib/ant.jar" />
+    <property name="ant.file.type.End_assigment-from-maven" value="file" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="package" />
+  </properties>
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="isNotEmptyTest" time="0.004" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingStringsOnIndexCheckingSize" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingAllfromCsvUsingAddAll" time="0.079" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addAll" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingAllfromCsvUsingLoop" time="0.06" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingIntsOnIndexCheckingSize" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="lastIndexOf" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="isEmptyTest" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="last" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="clear" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="checkSize" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingIntsCheckingSize" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="addingStringsCheckingSize" time="0.0" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="indexOf" time="0.001" />
+  <testcase classname="End_assignment.DoublyLinkedListTest" name="removeThenCheckSize" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
