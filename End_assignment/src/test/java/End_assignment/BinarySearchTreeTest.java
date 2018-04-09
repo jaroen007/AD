@@ -12,7 +12,7 @@ public class BinarySearchTreeTest {
 		BinarySearchTree binarySearchTree = new BinarySearchTree();
 		binarySearchTree.addAll();
 		assertEquals(true, binarySearchTree.search(
-				"10241,Maersk_Line_Triple-E,2014,Advanced_Models,Maersk,1518,NA,http://images.brickset.com/sets/images/10241-1.jpg,109.99,149.99,179.99,129.99,Box,LEGO_exclusive",
+				"\"798\",\"2 Medium Baseplates, Green\",1971,\"Basic\",\"Supplementaries\",2,NA,\"http://images.brickset.com/sets/images/798-1.jpg\",NA,3.4,NA,NA,\"Not specified\",\"Not specified\"",
 				binarySearchTree.head));
 	}
 
@@ -23,7 +23,7 @@ public class BinarySearchTreeTest {
 		BinarySearchTree binarySearchTree = new BinarySearchTree();
 		binarySearchTree.addAll();
 		assertEquals(true, binarySearchTree.search(
-				"4153,Freestyle_Playcase_(L),_5+,1995,Freestyle,,687,2,http://images.brickset.com/sets/images/4153-1.jpg,NA,38,NA,NA,Not_specified,Not_specified",
+				"\"6247\",\"Bounty Boat\",1992,\"Pirates\",\"Imperial Guards\",36,3,\"http://images.brickset.com/sets/images/6247-1.jpg\",NA,4.75,NA,NA,\"Box\",\"Retail\"",
 				binarySearchTree.head));
 	}
 

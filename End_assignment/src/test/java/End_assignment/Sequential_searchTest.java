@@ -11,7 +11,7 @@ public class Sequential_searchTest {
 	public void sequential_searchTest1() {
 		Sequential_search sequential = new Sequential_search();
 		assertEquals(true, sequential.search(
-				"6162,Building_Fun_with_LEGO,2007,Creator,Mosaic,286,NA,http://images.brickset.com/sets/images/6162-1.jpg,7.99,9.99,NA,NA,Box,Retail"));
+				"\"6247\",\"Bounty Boat\",1992,\"Pirates\",\"Imperial Guards\",36,3,\"http://images.brickset.com/sets/images/6247-1.jpg\",NA,4.75,NA,NA,\"Box\",\"Retail\""));
 	}
 
 	// Een test om de code coverage hoger te krijgen en de Ant blij te maken
