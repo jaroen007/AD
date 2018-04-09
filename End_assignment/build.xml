@@ -10,6 +10,9 @@
   <!-- Import maven-build.xml into the current project                        -->
   <!-- ====================================================================== -->
 
+  <presetdef name="javac">
+   <javac includeantruntime="false" />
+  </presetdef>
   <import file="maven-build.xml"/>
   
   <!-- ====================================================================== -->
