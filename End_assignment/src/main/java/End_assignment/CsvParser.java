@@ -10,16 +10,19 @@ import java.util.*;
 public class CsvParser {
 
 	private String[] legoArray;
+	private ArrayList<LegoSet> legoSets;
 
 	public static void main(String[] args) {
 		@SuppressWarnings("unused")
 		CsvParser parser = new CsvParser();
+		
 	};
 
 	@SuppressWarnings("resource")
 	public CsvParser() {
+		legoSets = new ArrayList<LegoSet>();
 
-		String csvFile = (String) (System.getProperty("user.dir") + File.separator + "legosets.csv");
+		String csvFile = (String) (System.getProperty("user.dir") + File.separator + "End_assignment" + File.separator + "legosets.csv");
 		BufferedReader br = null;
 		String line = "";
 		try {
@@ -38,8 +41,14 @@ public class CsvParser {
 			br = new BufferedReader(new FileReader(csvFile));
 			while ((line = br.readLine()) != null) {
 
+
 				if (counter < 0) {
 				} else if (counter < size) {
+					
+					String[] lineSplit = line.split(",");
+					legoSets.add(new LegoSet(lineSplit[0],lineSplit[1],lineSplit[2],lineSplit[3],lineSplit[4],lineSplit[5],lineSplit[6],lineSplit[7],lineSplit[8],lineSplit[9],lineSplit[10],lineSplit[11],lineSplit[12], lineSplit[13]));
+					
+					
 					legoArray[counter] = line;
 				}
 				counter++;
@@ -60,19 +69,19 @@ public class CsvParser {
 		}
 	}
 
+	public ArrayList<LegoSet> returnLegoSetArrayList() {
+		return legoSets;
+	}
+	
 	public String[] returnStringArray() {
 		return legoArray;
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void showList(List list) {
-		/*
-		ListIterator<String> litr = list.listIterator();
-
-		while (litr.hasNext()) {
-			//System.out.println(litr.next());
-		}
-		*/
+		System.out.println("sdf");
+		list.forEach(System.out::println);
+		
 	}
 
 }
