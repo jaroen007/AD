@@ -20,12 +20,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	// alle variabelen die nodig zijn
 	public Node head;
 	private int size;
-	public List<String> strings;
+	public List<T> strings;
 	public static CsvParser csvParser;
 	
-	public BinarySearchTree() {
+	public BinarySearchTree(List<T> strings) {
 		head = null;
 		size = 0;
+		this.strings = strings;
 	}
 	
 	// main om de Ant build blij te maken
@@ -66,14 +67,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	}
 	
 	// voeg alle item uit de string array toe aan de Tree
-	@SuppressWarnings("unchecked")
 	public boolean addAll() {
-		csvParser = new CsvParser();
-		strings = Arrays.asList(csvParser.returnStringArray());
-		for (String string : strings) {
-			addNode((T)string, head);
+		try {
+			for (T string : strings) {
+				addNode((T)string, head);
+			}
+			return true;
+		} catch (Exception e) {
+			return false;
 		}
-		return true;
 	}
 	
 	// de zoek fucntie
