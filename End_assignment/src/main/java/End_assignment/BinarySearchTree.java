@@ -77,7 +77,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	}
 	
 	// de zoek fucntie
-	public boolean search(T element, Node root) {
+	public int search(T element, Node root) {
 		Node node = root;
 		// compare text met de waarden
 		// als de text groter is komt er -1 terug
@@ -85,12 +85,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		// als de text hetzelfde is komt er 0 terug
 		// gebruik een recursive functie
 		if (element.compareTo(node.data) == 0) {
-			return true;
+			return strings.indexOf(element);
 	 	} else if (element.compareTo(node.data) < 0) {
 			return search(element, node.left);
 		} else if (element.compareTo(node.data) > 0) {
 			return search(element, node.right);
 		}
-		return false;
+		return -1;
 	}
 }

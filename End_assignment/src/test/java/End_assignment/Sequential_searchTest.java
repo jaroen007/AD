@@ -10,7 +10,7 @@ public class Sequential_searchTest {
 	@Test
 	public void sequential_searchTest1() {
 		Sequential_search sequential = new Sequential_search();
-		assertEquals(true, sequential.search(
+		assertEquals(5650, sequential.search(
 				"\"6247\",\"Bounty Boat\",1992,\"Pirates\",\"Imperial Guards\",36,3,\"http://images.brickset.com/sets/images/6247-1.jpg\",NA,4.75,NA,NA,\"Box\",\"Retail\""));
 	}
 

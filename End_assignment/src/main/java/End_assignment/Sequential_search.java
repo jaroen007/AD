@@ -17,7 +17,7 @@ public class Sequential_search<T extends Comparable<T>> {
 	
 	
 	@SuppressWarnings("unchecked")
-	public boolean search(T key) {
+	public int search(T key) {
 		// nieuwe csvParser voor csv naar list
 		csvParser = new CsvParser();
 		strings = Arrays.asList(csvParser.returnStringArray());
@@ -26,9 +26,9 @@ public class Sequential_search<T extends Comparable<T>> {
 		for (int i = 0; i < strings.size(); i++) {
 			// als de waarde van het huidige item gelijk is aan text return
 			if (key.compareTo((T)strings.get(i)) == 0) {
-				return true;
+				return strings.indexOf(strings.get(i));
 			}
 		}
-		return false;
+		return -1;
 	}
 }

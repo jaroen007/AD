@@ -22,7 +22,7 @@ public class CsvParser {
 	public CsvParser() {
 		legoSets = new ArrayList<LegoSet>();
 
-		String csvFile = (String) (System.getProperty("user.dir") + File.separator + "End_assignment" + File.separator + "legosets.csv");
+		String csvFile = (String) (System.getProperty("user.dir") + File.separator + "legosets.csv");
 		BufferedReader br = null;
 		String line = "";
 		try {
@@ -77,10 +77,11 @@ public class CsvParser {
 		return legoArray;
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@SuppressWarnings("rawtypes")
 	public void showList(List list) {
-		System.out.println("sdf");
-		list.forEach(System.out::println);
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println();
+		}
 		
 	}
 

@@ -15,7 +15,7 @@ public class Binary_search<T extends Comparable<T>> {
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes", })
-	public boolean search(T key) {
+	public int search(T key) {
 		// Gebruik de csvParser() om de csv om te zetten in list
 		csvParser = new CsvParser();
 		// krijg de lijst met strings
@@ -27,7 +27,7 @@ public class Binary_search<T extends Comparable<T>> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public boolean binarySearch(T searchText, int low, int high) {
+	public int binarySearch(T searchText, int low, int high) {
 		// bovenste en onderste waarden waartussen gezocht moet worden
 		if (low > high) {
 			low = 0;
@@ -41,13 +41,13 @@ public class Binary_search<T extends Comparable<T>> {
 		// als de text hetzelfde is komt er 0 terug
 		// gebruik een recursive functie
 		if (searchText.compareTo((T) strings.get(middle)) == 0) {
-			return true;
+			return strings.indexOf(strings.get(middle));
 		} else if (searchText.compareTo((T) strings.get(middle)) < 0) {
 			return binarySearch(searchText, low, middle - 1);
 		} else if (searchText.compareTo((T) strings.get(middle)) > 0) {
 			return binarySearch(searchText, middle + 1, high);
 		}
-		return false;
+		return -1;
 	}
 	
 	public String test() {

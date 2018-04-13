@@ -10,7 +10,7 @@ public class Binary_searchTest {
 	@Test
 	public void binary_searchTest1() {
 		Binary_search binary = new Binary_search(); 
-		assertEquals(true, binary.search(
+		assertEquals(4758, binary.search(
 				"\"798\",\"2 Medium Baseplates, Green\",1971,\"Basic\",\"Supplementaries\",2,NA,\"http://images.brickset.com/sets/images/798-1.jpg\",NA,3.4,NA,NA,\"Not specified\",\"Not specified\""));
 	}
 
@@ -18,7 +18,7 @@ public class Binary_searchTest {
 	@Test
 	public void binary_searchTest2() {
 		Binary_search binary = new Binary_search();
-		assertEquals(true, binary.search(
+		assertEquals(3147, binary.search(
 				"\"6247\",\"Bounty Boat\",1992,\"Pirates\",\"Imperial Guards\",36,3,\"http://images.brickset.com/sets/images/6247-1.jpg\",NA,4.75,NA,NA,\"Box\",\"Retail\""));
 	}
 
@@ -26,7 +26,7 @@ public class Binary_searchTest {
 	@Test
 	public void binary_searchTest3() {
 		Binary_search binary = new Binary_search();
-		assertEquals(true, binary.search(
+		assertEquals(4789, binary.search(
 				"\"8022\",\"Multi Model Starter Set\",1993,\"Technic\",\"Universal\",118,NA,\"http://images.brickset.com/sets/images/8022-1.jpg\",NA,15.5,NA,NA,\"Box\",\"Retail\""));
 	}
 
