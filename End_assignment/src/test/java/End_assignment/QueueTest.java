@@ -49,7 +49,7 @@ public class QueueTest {
 		queue.push("Got pushed second");
 		queue.push("Got pushed third");
 		
-		//TODO: controleren welke overblijfen.
+		assertEquals("Got pushed first", queue.peek());
 
 		assertTrue("The size is 3.", (queue.getSize() == 3));
 	}
@@ -129,7 +129,8 @@ public class QueueTest {
 
 		assertTrue("Peek element", queue.peek() == "Got pushed first");
 		
-		//TODO: controleren of ze er nog in zitten.
+		assertEquals(3, queue.getSize());
+		assertTrue("Peek element", queue.peek() != null);
 	}
 
 	@Test

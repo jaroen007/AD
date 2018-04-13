@@ -35,7 +35,7 @@ public class Queue<T> {
 		linkedList.clear();
 	}
 
-	// Returns the object at the head of the Stack without removing it.
+	// Returns the object at the head of the Queue without removing it.
 	// Return null if the queue is empty.
 	public T peek() {
 		if (isEmpty()) { // Returns null if its empty.
@@ -46,7 +46,7 @@ public class Queue<T> {
 		return linkedList.get(0); // (Does not remove the object!)
 	}
 
-	// Returns the object at the head of the Stack without removing it.
+	// Returns the object at the head of the Queue without removing it.
 	public T element() {
 		if (isEmpty()) { // Throwing IllegalStateException if its empty.
 			throw new IllegalStateException();
@@ -56,7 +56,7 @@ public class Queue<T> {
 		return linkedList.get(0); // (Does not remove the object!)
 	}
 
-	// Removes and returns the object at the top of the Stack.
+	// Removes and returns the object at the top of the Queue.
 	public Object poll() {
 		if (isEmpty()) { // Throwing IllegalStateException if its empty.
 			return null;
@@ -66,7 +66,7 @@ public class Queue<T> {
 		return linkedList.remove(0);
 	}
 
-	// Removes and returns the object at the top of the Stack.
+	// Removes and returns the object at the top of the Queue.
 	public Object remove() {
 		if (isEmpty()) { // Throwing IllegalStateException if its empty.
 			throw new IllegalStateException();

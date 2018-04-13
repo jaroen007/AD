@@ -41,7 +41,7 @@ public class StackTest {
 		stack.push("Got pushed second");
 		stack.push("Got pushed third");
 
-		//TODO: controleren welke overblijfen.
+		assertEquals(3, stack.getSize());
 		
 		assertTrue("test peek.", (stack.peek() == "Got pushed third"));
 	}
@@ -106,7 +106,7 @@ public class StackTest {
 
 		stack.pop();
 		
-		//TODO: controleren welke overblijfen.
+		assertEquals("Got pushed second", stack.peek());
 
 		assertTrue("The size is 2.", (stack.getSize() == 2));
 	}
