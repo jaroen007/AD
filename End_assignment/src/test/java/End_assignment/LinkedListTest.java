@@ -4,6 +4,7 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -11,12 +12,26 @@ public class LinkedListTest {
 
 	public static String[] stringArray;
 	public static CsvParser csvParser;
-
+	private static ArrayList<LegoSet> legoSets;
+	
 	@Before
 	public void setUp() throws Exception {
 
 	}
 
+	@Test
+	public void addingAllLegoObjects() {
+		csvParser = new CsvParser();
+		legoSets = csvParser.returnLegoSetArrayList();
+		
+		LinkedList<Object> linkedList = new LinkedList<Object>();
+
+		for (LegoSet s : legoSets) {
+			linkedList.add(s);
+		}
+		assertTrue("Added all items from the LegoSets arrayList", legoSets.size() == linkedList.size());
+	}
+	
 	@Test
 	public void addingAllfromCsvUsingLoop() {
 		csvParser = new CsvParser();
