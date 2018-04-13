@@ -2,6 +2,8 @@ package End_assignment;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.*;
 
 @SuppressWarnings({ "unchecked", "rawtypes" })
@@ -9,13 +11,26 @@ public class QueueTest {
 
 	public static String[] stringArray;
 	public static CsvParser csvParser;
+	private static ArrayList<LegoSet> legoSets;
+	
 	public static Queue queue;
 
 	@Before
 	public void setUp() throws Exception {
 		csvParser = new CsvParser();
 		stringArray = csvParser.returnStringArray();
+		legoSets = csvParser.returnLegoSetArrayList();
+		
+	}
+	
+	@Test
+	public void pushLegoSetsToQueue() {
 		queue = new Queue();
+		
+		for (LegoSet s : legoSets) {
+			queue.push(s);
+		}
+		
 	}
 
 	@Test

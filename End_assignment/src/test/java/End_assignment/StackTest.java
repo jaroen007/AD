@@ -2,6 +2,8 @@ package End_assignment;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.*;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -9,12 +11,25 @@ public class StackTest {
 
 	public static String[] stringArray;
 	public static CsvParser csvParser;
+	private static ArrayList<LegoSet> legoSets;
+	
 	public static Stack stack;
 	
 	@Before
 	public void setUp() throws Exception {
 		csvParser = new CsvParser();
 		stringArray = csvParser.returnStringArray();
+		legoSets = csvParser.returnLegoSetArrayList();
+	}
+	
+	@Test
+	public void pushLegoSetsToStack() {
+		stack = new Stack();
+		
+		for (LegoSet s : legoSets) {
+			stack.push(s);
+		}
+		
 	}
 
 	@Test
