@@ -30,6 +30,7 @@ public class StackTest {
 			stack.push(s);
 		}
 		
+		assertTrue("test peek.", (legoSets.size() == stack.getSize()));
 	}
 
 	@Test
@@ -40,6 +41,8 @@ public class StackTest {
 		stack.push("Got pushed second");
 		stack.push("Got pushed third");
 
+		//TODO: controleren welke overblijfen.
+		
 		assertTrue("test peek.", (stack.peek() == "Got pushed third"));
 	}
 
@@ -88,6 +91,8 @@ public class StackTest {
 		stack.push("Got pushed second");
 		stack.push("Got pushed third");
 
+		//TODO: controleren welke overblijfen.
+		
 		assertTrue("The size is 3.", (stack.getSize() == 3));
 	}
 
@@ -100,6 +105,8 @@ public class StackTest {
 		stack.push("Got pushed third");
 
 		stack.pop();
+		
+		//TODO: controleren welke overblijfen.
 
 		assertTrue("The size is 2.", (stack.getSize() == 2));
 	}

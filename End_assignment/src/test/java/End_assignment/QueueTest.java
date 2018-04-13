@@ -31,6 +31,7 @@ public class QueueTest {
 			queue.push(s);
 		}
 		
+		assertTrue("test peek.", (legoSets.size() == queue.getSize()));
 	}
 
 	@Test
@@ -47,6 +48,8 @@ public class QueueTest {
 		queue.push("Got pushed first");
 		queue.push("Got pushed second");
 		queue.push("Got pushed third");
+		
+		//TODO: controleren welke overblijfen.
 
 		assertTrue("The size is 3.", (queue.getSize() == 3));
 	}
@@ -125,6 +128,8 @@ public class QueueTest {
 		queue.push("Got pushed third");
 
 		assertTrue("Peek element", queue.peek() == "Got pushed first");
+		
+		//TODO: controleren of ze er nog in zitten.
 	}
 
 	@Test

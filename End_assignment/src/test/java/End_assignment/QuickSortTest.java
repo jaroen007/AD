@@ -1,5 +1,6 @@
 package End_assignment;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.*;
@@ -8,12 +9,24 @@ public class QuickSortTest {
 
 	public static String[] stringArray;
 	public static CsvParser csvParser;
-
+	private static ArrayList<LegoSet> legoSets;
+	
 	@Before
 	public void setUp() throws Exception {
 		csvParser = new CsvParser();
 		stringArray = csvParser.returnStringArray();
+		legoSets = csvParser.returnLegoSetArrayList();
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Test
+	public void testLegoObjects() {
+
+		ArrayList<LegoSet> al2 = new ArrayList<LegoSet>(legoSets.subList(1, 50));
+		
+		QuickSort quickSort = new QuickSort(al2);
+	}
+
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
@@ -21,7 +34,7 @@ public class QuickSortTest {
 
 		List<String> strings = Arrays.asList(stringArray);
 		QuickSort quicksort = new QuickSort(strings);
-		csvParser.showList(quicksort.returnSorted());
+		//csvParser.showList(quicksort.returnSorted());
 	}
 
 	// Een test om de code coverage hoger te krijgen en de Ant blij te maken
@@ -29,4 +42,6 @@ public class QuickSortTest {
 	public void last() {
 		QuickSort.main(new String[0]);
 	}
+	
+
 }
