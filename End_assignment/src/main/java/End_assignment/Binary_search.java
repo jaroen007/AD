@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Binary_search<T extends Comparable<T>> {
-	public List<String> strings;
-	public static CsvParser csvParser;
+	public List<T> strings;
 
 	public Binary_search() {
 	}
@@ -13,22 +12,18 @@ public class Binary_search<T extends Comparable<T>> {
 	// main functie om de Ant build blij te maken
 	public static void main(String[] args) {
 	}
-
-	@SuppressWarnings({ "unchecked", "rawtypes", })
-	public int search(T key) {
-		// Gebruik de csvParser() om de csv om te zetten in list
-		csvParser = new CsvParser();
-		// krijg de lijst met strings
-		strings = Arrays.asList(csvParser.returnStringArray());
+	
+	public int search(T key, List<T> strings) {
 		// quicksort omdat de binary search een gesorteerde lijst nodig heeft;
 		QuickSort quickSort = new QuickSort(strings);
 		strings = quickSort.returnSorted();
-		return binarySearch(key, 0, strings.size());
+		return binarySearch(key, 0, strings.size(), strings);
 	}
 
-	@SuppressWarnings("unchecked")
-	public int binarySearch(T searchText, int low, int high) {
+	public int binarySearch(T searchText, int low, int high, List<T> strings) {
 		// bovenste en onderste waarden waartussen gezocht moet worden
+		// als de onderste waarde boven de bovenste waarde komt dan ligt het midden boven de bovenste waarde
+		// dit betekent dat het buiten de index valt wat niet mogelijk is
 		if (low > high) {
 			low = 0;
 			high = strings.size();
@@ -48,10 +43,5 @@ public class Binary_search<T extends Comparable<T>> {
 			return binarySearch(searchText, middle + 1, high);
 		}
 		return -1;
-	}
-	
-	public String test() {
-		String iets = "test";
-		return iets;
 	}
 }
