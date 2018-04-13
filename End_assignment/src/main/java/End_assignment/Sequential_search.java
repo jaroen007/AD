@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Sequential_search<T extends Comparable<T>> {
-	public List<T> stringArray;
-	public List<String> strings;
+	public List<T> strings;
 	public static CsvParser csvParser;
 	
-	public Sequential_search() {
+	public Sequential_search(List<T> strings) {
+		this.strings = strings;
 	}
 	
 	// main om de Ant vrolijk te maken
@@ -17,11 +17,7 @@ public class Sequential_search<T extends Comparable<T>> {
 	
 	
 	@SuppressWarnings("unchecked")
-	public int search(T key) {
-		// nieuwe csvParser voor csv naar list
-		csvParser = new CsvParser();
-		strings = Arrays.asList(csvParser.returnStringArray());
-		
+	public int search(T key) {		
 		// loop door de hele lijst van strings
 		for (int i = 0; i < strings.size(); i++) {
 			// als de waarde van het huidige item gelijk is aan text return

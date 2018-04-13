@@ -2,14 +2,25 @@ package End_assignment;
 
 import static org.junit.Assert.*;
 import org.junit.*;
+import java.util.*;
 
-public class BinarySearchTreeTest {
+public class BinarySearchTreeTest<T extends Comparable<T>> {
+
+	public List<T> strings;
+	public static CsvParser csvParser;
+
+	@SuppressWarnings("unchecked")
+	@Before
+	public void beforeTest() {
+		csvParser = new CsvParser();
+		strings = (List<T>) Arrays.asList(csvParser.returnStringArray());
+	}
 
 	// een test waarvan de waarde onder het midden ligt
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void binarySearchTreeTest1() {
-		BinarySearchTree binarySearchTree = new BinarySearchTree();
+		BinarySearchTree binarySearchTree = new BinarySearchTree(strings);
 		binarySearchTree.addAll();
 		assertEquals(6171, binarySearchTree.search(
 				"\"798\",\"2 Medium Baseplates, Green\",1971,\"Basic\",\"Supplementaries\",2,NA,\"http://images.brickset.com/sets/images/798-1.jpg\",NA,3.4,NA,NA,\"Not specified\",\"Not specified\"",
@@ -20,7 +31,7 @@ public class BinarySearchTreeTest {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void binarySearchTreeTest2() {
-		BinarySearchTree binarySearchTree = new BinarySearchTree();
+		BinarySearchTree binarySearchTree = new BinarySearchTree(strings);
 		binarySearchTree.addAll();
 		assertEquals(5650, binarySearchTree.search(
 				"\"6247\",\"Bounty Boat\",1992,\"Pirates\",\"Imperial Guards\",36,3,\"http://images.brickset.com/sets/images/6247-1.jpg\",NA,4.75,NA,NA,\"Box\",\"Retail\"",
