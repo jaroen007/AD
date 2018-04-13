@@ -25,7 +25,7 @@ public class BubbleSortTest<T> {
 		BubbleSort bubblesort = new BubbleSort(legoSets);
 		
 		//Display the sortedList
-		csvParser.showList(bubblesort.returnSorted());
+		//csvParser.showList(bubblesort.returnSorted());
 	}
 	
 	// Een test om de code coverage hoger te krijgen en de Ant blij te maken

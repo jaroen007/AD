@@ -14,12 +14,15 @@ public class BubbleSort<T extends Comparable<T>> {
 	
 	 public BubbleSort( List<T> legoArray) {
 		sortedList = legoArray; //fill sorted list with all the unsorted things.
-		 
+		
 	 	int n = sortedList.size();    
+	 	
         for(int i=0; i < n; i++){  //loop through all items
+
              for(int j=1; j < (n-i); j++){ //create another loop to begin the check at the left side.
             	//call compareTo to start the check returning the indexOf. -1 = last one lower (do nothing), 0 = even, > 0 = last one higher (so swap)
-                 if(sortedList.get(j-1).compareTo(sortedList.get(j)) > 0){  
+            	 
+            	 if(sortedList.get(j-1).compareTo(sortedList.get(j)) > 0){  
                 	 swap(j-1, j); //swap the values. 
                  }  
              }  

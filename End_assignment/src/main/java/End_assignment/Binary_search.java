@@ -49,9 +49,5 @@ public class Binary_search<T extends Comparable<T>> {
 		}
 		return -1;
 	}
-	
-	public String test() {
-		String iets = "test";
-		return iets;
-	}
+
 }
