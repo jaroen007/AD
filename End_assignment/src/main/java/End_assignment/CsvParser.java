@@ -67,6 +67,8 @@ public class CsvParser {
 				}
 			}
 		}
+		
+
 	}
 
 	public ArrayList<LegoSet> returnLegoSetArrayList() {
@@ -80,7 +82,7 @@ public class CsvParser {
 	@SuppressWarnings("rawtypes")
 	public void showList(List list) {
 		for (int i = 0; i < list.size(); i++) {
-			System.out.println();
+			System.out.println(list.get(i));
 		}
 		
 	}
