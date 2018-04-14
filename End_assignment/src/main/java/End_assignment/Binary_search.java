@@ -1,6 +1,5 @@
 package End_assignment;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Binary_search<T extends Comparable<T>> {
@@ -14,6 +13,7 @@ public class Binary_search<T extends Comparable<T>> {
 	public static void main(String[] args) {
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public int search(T key) {
 		// quicksort omdat de binary search een gesorteerde lijst nodig heeft;
 		QuickSort quickSort = new QuickSort(strings);

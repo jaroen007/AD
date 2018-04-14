@@ -1,5 +1,6 @@
 package End_assignment;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class StackTest {
 		stack.push("Got pushed second");
 		stack.push("Got pushed third");
 
-		//TODO: controleren welke overblijfen.
+		assertEquals(3, stack.getSize());
 		
 		assertTrue("test peek.", (stack.peek() == "Got pushed third"));
 	}
@@ -91,7 +92,7 @@ public class StackTest {
 		stack.push("Got pushed second");
 		stack.push("Got pushed third");
 
-		//TODO: controleren welke overblijfen.
+		assertEquals("Got pushed third", (String)stack.peek());
 		
 		assertTrue("The size is 3.", (stack.getSize() == 3));
 	}
@@ -106,7 +107,7 @@ public class StackTest {
 
 		stack.pop();
 		
-		//TODO: controleren welke overblijfen.
+		assertEquals("Got pushed second", (String)stack.peek());
 
 		assertTrue("The size is 2.", (stack.getSize() == 2));
 	}
