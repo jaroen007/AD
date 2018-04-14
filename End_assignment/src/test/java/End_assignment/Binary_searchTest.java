@@ -2,6 +2,7 @@ package End_assignment;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,12 +13,34 @@ public class Binary_searchTest<T extends Comparable<T>> {
 	public List<T> strings;
 	public static CsvParser csvParser;
 	
+	private static ArrayList<LegoSet> legoSets;
+	
 	@SuppressWarnings("unchecked")
 	@Before
 	public void beforeTest() {
 		csvParser = new CsvParser();
 		strings = (List<T>) Arrays.asList(csvParser.returnStringArray());
+		
+		legoSets = csvParser.returnLegoSetArrayList();
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@Test
+	public void binary_searchTestLegoObject() {
+		
+		//First we get a subset (to speed the search up)
+		ArrayList<LegoSet> subset = new ArrayList<LegoSet>(legoSets.subList(0,50));
+		
+		//Initiate the binary search with the list of items.
+		Binary_search binary = new Binary_search(subset); 
+		
+		//Select the third of the list. We are going to try to find this item in the list again.
+		LegoSet legoSet = legoSets.get(3);
+
+		//assert that the binary search finds it on the third entry
+		assertEquals(binary.search(legoSet),3);
+	}
+	
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test

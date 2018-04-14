@@ -25,7 +25,7 @@ public class LegoSet implements Comparable<LegoSet>{
 	
 	public LegoSet(String Item_Number, String Name, String Year, String Theme, String Subtheme, String Pieces, String Minifigures, String Image_URL, String GBP_MSRP, String USD_MSRP, String CAD_MSRP, String EUR_MSRP, String Packaging, String Availability) {
 		
-		this.Item_Number = Item_Number ;
+		this.Item_Number = Item_Number.replace("\"", "");
 		this.Name = Name;
 		this.Year = Year;
 		this.Theme = Theme;
@@ -70,19 +70,24 @@ public class LegoSet implements Comparable<LegoSet>{
 		boolean CompareAsInt = true;
 		
 		try{
-			CompareFirst = Integer.parseInt(CompareOn.replaceAll("^\"|\"$", ""));
+			CompareFirst = Integer.parseInt(CompareOn);
 		}catch (NumberFormatException e) {
 			CompareAsInt = false;
 		}
 
 		try{
-			CompareSecond = Integer.parseInt(givenLego.CompareOn.replaceAll("^\"|\"$", ""));
+			CompareSecond = Integer.parseInt(givenLego.CompareOn);
 		}catch (NumberFormatException e) {
 			CompareAsInt = false;
 		}
 		
-		if(CompareAsInt)
-		 return CompareFirst - CompareSecond;
+		if(CompareAsInt) {
+		 if( CompareFirst - CompareSecond == 0) {
+			 return Name.compareTo(givenLego.Name);
+		 }else {
+			 return CompareFirst - CompareSecond;
+		 }
+		}
 		
 		return CompareOn.compareTo(givenLego.CompareOn);
 	}

@@ -22,9 +22,10 @@ public class QuickSortTest {
 	@Test
 	public void testLegoObjects() {
 
-		ArrayList<LegoSet> al2 = new ArrayList<LegoSet>(legoSets.subList(1, 50));
+		ArrayList<LegoSet> subString = new ArrayList<LegoSet>(legoSets.subList(0, 300));
 		
-		QuickSort quickSort = new QuickSort(al2);
+		QuickSort quickSort = new QuickSort(subString);
+
 	}
 
 
@@ -34,7 +35,6 @@ public class QuickSortTest {
 
 		List<String> strings = Arrays.asList(stringArray);
 		QuickSort quicksort = new QuickSort(strings);
-		//csvParser.showList(quicksort.returnSorted());
 	}
 
 	// Een test om de code coverage hoger te krijgen en de Ant blij te maken

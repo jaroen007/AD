@@ -1,5 +1,6 @@
 package End_assignment;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,14 +22,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	public Node head;
 	private int size;
 	public List<T> strings;
-	public static CsvParser csvParser;
 	
-	public BinarySearchTree(List<T> strings) {
+	public BinarySearchTree() {
 		head = null;
 		size = 0;
-		this.strings = strings;
 	}
-	
+
 	// main om de Ant build blij te maken
 	public static void main(String[] args) {
 		
@@ -67,7 +66,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	}
 	
 	// voeg alle item uit de string array toe aan de Tree
-	public boolean addAll() {
+	public boolean addAll(List<T> strings) {
+		this.strings = strings;
+		
 		try {
 			for (T string : strings) {
 				addNode((T)string, head);
@@ -78,6 +79,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		}
 	}
 	
+	public int search(T element) {
+		return search(element, head);
+	}
+
 	// de zoek fucntie
 	public int search(T element, Node root) {
 		Node node = root;

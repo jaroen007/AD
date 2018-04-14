@@ -23,10 +23,13 @@ public class InsertionSortTest {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void testLegoObjects() {
-		//Create bubbleSort object with ArrayList<LegoSet> as argument.
-		InsertionSort insertsort = new InsertionSort(legoSets);
+		//First we get a subset (to speed the search up)
+		ArrayList<LegoSet> subset = new ArrayList<LegoSet>(legoSets.subList(0,50));
 		
-		//Display the sortedList
+		//Create bubbleSort object with ArrayList<LegoSet> as argument.
+		InsertionSort insertsort = new InsertionSort(subset);
+
+		//Return the list to the csv parser to show it in the console.
 		csvParser.showList(insertsort.returnSorted());
 	}
 	
@@ -40,7 +43,6 @@ public class InsertionSortTest {
 		InsertionSort insertsort = new InsertionSort(strings);
 		
 		csvParser.showList(insertsort.returnSorted());
-		
 	}
 	
 	@Test

@@ -45,8 +45,4 @@ public class Binary_search<T extends Comparable<T>> {
 		}
 		return -1;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> bcad5a8becc667678f03d4018e618b5a98c54a67
 }
