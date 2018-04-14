@@ -43,26 +43,6 @@ public class LegoSet implements Comparable<LegoSet>{
 		this.CompareOn = this.Item_Number;
 	}
 	
-	@Override
-	public String toString() {
-	
-		return "ITEMID: "+ Item_Number + " Contains[" +
-       Name + "," +
-       Year + "," +
-       Theme + "," +
-       Subtheme + "," +
-       Pieces + "," +
-       Minifigures + "," +
-       Image_URL + "," +
-       GBP_MSRP + "," +
-       USD_MSRP + "," +
-       CAD_MSRP + "," +
-       EUR_MSRP + "," +
-       Packaging + "," +
-       Availability + "]";
-	
-	}
-	
 	public int compareTo(LegoSet givenLego) {
 		
 		int CompareFirst = 0;
@@ -91,9 +71,4 @@ public class LegoSet implements Comparable<LegoSet>{
 		
 		return CompareOn.compareTo(givenLego.CompareOn);
 	}
-
-	
-	
-	
-
 }

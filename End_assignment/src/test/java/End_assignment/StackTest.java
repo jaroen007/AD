@@ -117,5 +117,4 @@ public class StackTest {
 	public void last() {
 		Stack.main(new String[0]);
 	}
-
 }

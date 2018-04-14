@@ -42,6 +42,4 @@ public class QuickSortTest {
 	public void last() {
 		QuickSort.main(new String[0]);
 	}
-	
-
 }

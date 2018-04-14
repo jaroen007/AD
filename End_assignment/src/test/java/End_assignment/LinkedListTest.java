@@ -46,18 +46,6 @@ public class LinkedListTest {
 		assertTrue("Added all items from the LinkedList", linkedList.size() == linkedList.size());
 	}
 
-	public void addingAllfromCsvUsingAddAll() {
-		csvParser = new CsvParser();
-		stringArray = csvParser.returnStringArray();
-
-		LinkedList<String> linkedList = new LinkedList<String>();
-		List<String> strings = Arrays.asList(stringArray);
-
-		linkedList.addAll(strings);
-
-		assertTrue("Added all items from the LinkedList", linkedList.size() == linkedList.size());
-	}
-
 	@Test
 	public void addingStringsCheckingSize() {
 		LinkedList<String> linkedList = new LinkedList<String>();
